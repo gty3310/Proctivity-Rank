@@ -1,6 +1,10 @@
 {
   "name": "IdeasHunt",
   "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --mode=development --watch"
+  },
   "dependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
@@ -14,5 +18,24 @@
     "redux": "^4.0.0",
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0"
-  }
+  },
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gty3310/IdeasHunt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gty3310/IdeasHunt/issues"
+  },
+  "homepage": "https://github.com/gty3310/IdeasHunt#readme"
 }
