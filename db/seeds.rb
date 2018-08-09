@@ -34,7 +34,7 @@ user3.save
 
 Post1 = Post.new(name: "Idea 1")
 Post1.description = "Idea 1 description"
-Post1.user_id = 1
+Post1.user_id = user2.id
 Post1.tagline = "idea 1 tagline"
 # Post1.user = users.sample
 Post1.save
