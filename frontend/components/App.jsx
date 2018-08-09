@@ -1,9 +1,14 @@
+import NavBarContainer from './nav_bar/nav_bar_container';
 
 import React from 'react';
 
 const App = () => (
   <div>
-    <h1>Idea Hunt (from app.jsx)</h1>
+    <header>
+      <NavBarContainer />
+    </header>
+
+    <h1>Idea Hunt</h1>
   </div>
 );
 

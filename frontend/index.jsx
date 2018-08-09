@@ -1,20 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import * as sessionApiUtil from './util/session_api_util'
+import * as sessionApiUtil from './util/session_api_util'
 import configureStore from './store/store';
 import Root from './components/root';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const store = configureStore();
+  let store = configureStore();
 
   // TESTING START
   // window.signup = sessionApiUtil.signup;
+  window.login = sessionApiUtil.login;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   // TESTING END
 
   const root = document.getElementById('root');
-  ReactDOM.render(<h1>Welcome to IdeasHunt</h1>, root);
+  // ReactDOM.render(<h1>Welcome to IdeasHunt</h1>, root);
   ReactDOM.render(<Root store={store} />, root);
 });
