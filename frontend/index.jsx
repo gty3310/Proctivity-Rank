@@ -7,7 +7,15 @@ import Root from './components/root';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  let store = configureStore();
+  let store;
+  // debugger;
+  if (window.currentUser) {
+    const preloadedState = { session: { currentUser: window.currentUser } };
+    store = configureStore(preloadedState);
+    delete window.currentUser;
+  } else {
+    store = configureStore();
+  }
 
   // TESTING START
   window.signup = sessionAction.signup;
@@ -16,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   // TESTING END
+  // debugger;
 
   const root = document.getElementById('root');
   // ReactDOM.render(<h1>Welcome to IdeasHunt</h1>, root);
