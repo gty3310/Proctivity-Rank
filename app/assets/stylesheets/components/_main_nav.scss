@@ -1,0 +1,31 @@
+.main-nav {
+  display: flex;
+  min-height: 50px;
+  padding: 9px 5px 9px 5px;
+  width: 95%;
+  margin: 0 auto;
+  // left and right
+  justify-content: space-between;
+}
+
+.nav-bar-left-half {
+  display: flex;
+  .logo {
+    display: flex;
+    min-width: 45px;
+  }
+
+  .search-bar {
+    display: flex;
+    min-width: 240px;
+  }
+}
+
+.nav-bar-right-half {
+	// width: 15%;
+	display: flex;
+	justify-content: flex-end;
+  .login-signup {
+    display: inline-block;
+  }
+}

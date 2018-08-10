@@ -31,7 +31,13 @@ class NavBar extends React.Component {
 
     return (
       <div className="main-nav">
-        {sessionView()}
+        <div className="nav-bar-left-half">
+          <div className="logo"></div>
+          <div className="search-bar"></div>
+        </div>
+        <div className="nav-bar-right-half">
+          {sessionView()}
+        </div>
       </div>
     );
   }
