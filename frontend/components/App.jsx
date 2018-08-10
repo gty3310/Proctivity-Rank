@@ -11,6 +11,7 @@ import Modal from './modal/modal';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
+import Home from './home/home_container';
 
 const App = () => (
   <div>
@@ -18,6 +19,9 @@ const App = () => (
     <header>
       <NavBarContainer />
     </header>
+    <switch>
+      <Route exact path='/' component={Home} />
+    </switch>
   </div>
 );
 
