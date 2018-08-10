@@ -18,8 +18,6 @@ const App = () => (
     <header>
       <NavBarContainer />
     </header>
-
-    <h1>Idea Hunt</h1>
   </div>
 );
 

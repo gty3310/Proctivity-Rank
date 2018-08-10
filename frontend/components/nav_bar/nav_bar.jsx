@@ -21,9 +21,9 @@ class NavBar extends React.Component {
           );
           const personalGreeting = () => (
             <hgroup className="header-group">
-              <h2 className="header-name">Hi, {this.props.currentUser.username}!</h2>
-              <button className="header-button" onClick={this.props.logout}>
-                Log Out</button>
+              <button className="white-button" onClick={this.props.logout}>
+                  Log Out</button>
+              <img className="user_img" src={`${this.props.currentUser.image_url}`}></img>
             </hgroup>
           );
           return this.props.currentUser ? personalGreeting() : sessionLinks();
@@ -32,7 +32,9 @@ class NavBar extends React.Component {
     return (
       <div className="main-nav">
         <div className="nav-bar-left-half">
-          <div className="logo"></div>
+          <div className="logo">
+            <img src="https://i.imgur.com/iRzrFIR.png"/>
+          </div>
           <div className="search-bar"></div>
         </div>
         <div className="nav-bar-right-half">

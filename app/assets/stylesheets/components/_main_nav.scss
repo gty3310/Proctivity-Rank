@@ -1,6 +1,6 @@
 .main-nav {
   display: flex;
-  min-height: 50px;
+  min-height: 45px;
   padding: 9px 5px 9px 5px;
   width: 95%;
   margin: 0 auto;
@@ -12,8 +12,10 @@
 .nav-bar-left-half {
   display: flex;
   .logo {
+    align-items: center;
     display: flex;
-    min-width: 45px;
+    width: 40px;
+    height: 40px;
   }
 
   .search-bar {
@@ -24,9 +26,23 @@
 
 .nav-bar-right-half {
 	// width: 15%;
+  align-items: center;
 	display: flex;
 	justify-content: flex-end;
   .login-signup {
     display: inline-block;
+
+  }
+  .header-group {
+    display: flex;
+    align-items: center;
+    min-width: 110px;
+    height: 45px;
+    .user_img{
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-left: 10px;
+    }
   }
 }
