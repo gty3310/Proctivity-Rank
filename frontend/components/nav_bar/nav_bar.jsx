@@ -23,7 +23,7 @@ class NavBar extends React.Component {
             <hgroup className="header-group">
               <button className="white-button" onClick={this.props.logout}>
                   Log Out</button>
-              <img className="user_img" src={`${this.props.currentUser.image_url}`}></img>
+              <img className="user_img" src={`${this.props.currentUser.imageUrl}`}></img>
             </hgroup>
           );
           return this.props.currentUser ? personalGreeting() : sessionLinks();

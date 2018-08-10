@@ -9,7 +9,7 @@
 
 demo_user = User.new(username: "demo_user", password: "password")
 demo_user.headline = "Software Developer"
-# demo_user.image_url = "user_images.sample"
+demo_user.image_url = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1533941403/project%20idea%20hunt/Screenshot_at_Aug_10_15-45-06.png"
 demo_user.email = "test@gmail.com"
 
 user1 = User.new(username: "Peter_Todd", password: "password")

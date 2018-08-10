@@ -10,6 +10,7 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.loginDemoUser = this.loginDemoUser.bind(this);
   }
 
   update(field) {
@@ -22,6 +23,13 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user).then(this.props.closeModal);
+  }
+
+  loginDemoUser() {
+    this.setState( {username: "demo_user", password: "password"} );
+    const user = Object.assign({}, this.state);
+    this.props.processForm({username: "demo_user", password: "password"})
+      .then(this.props.closeModal);
   }
 
   renderErrors() {
@@ -37,7 +45,8 @@ class SessionForm extends React.Component {
   }
 
   render() {
-
+    let demoUserButton = null;
+    let welcomeLine = null;
     let emailInput = () =>{
       if (this.props.formType == 'signup'){
         return (
@@ -51,14 +60,16 @@ class SessionForm extends React.Component {
       }
     };
 
-    let welcomeLine = () =>{
-      if (this.props.formType == 'signup'){
-        return "Sign Up to Join The Community";
-      }
-      else {
-        return "Log In to Join The Community";
-      }
-    };
+
+    if (this.props.formType == 'signup'){
+      welcomeLine = "Sign Up to Join The Community";
+    }
+    else {
+      demoUserButton = <button className="orange-button medium-size"
+        onClick={this.loginDemoUser} >DEMO LOG IN</button>;
+      welcomeLine = "Log In to Join The Community";
+    }
+
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -67,10 +78,10 @@ class SessionForm extends React.Component {
             onClick={this.props.closeModal}>
             {'<'}
           </button>
-          
+
           <br/>
           <h2>
-            {welcomeLine()}
+            {welcomeLine}
           </h2>
           <p>
             Productivity-Tips Hunt is a community to share and geek out about
@@ -104,8 +115,9 @@ class SessionForm extends React.Component {
               {emailInput()}
             </div>
             <br/>
-            <input className="session-submit orange-button" type="submit"
+            <input className="session-submit white-button medium-size" type="submit"
               value={this.props.formType} />
+            {demoUserButton}
           </div>
         </form>
         <div className="modal-screen"></div>
