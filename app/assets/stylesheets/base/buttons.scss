@@ -29,6 +29,18 @@ button {
 	border-color: $orange;
 }
 
+.backButton {
+  border-radius: 5px;
+  background-color: #e8e8e8;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  &:hover{
+    opacity: 0.8;
+  }
+}
+
+
 input[type=submit] {
   font-weight: bold;
   margin-left: 0;

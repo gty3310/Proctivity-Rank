@@ -1,0 +1,60 @@
+.modal-screen {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  // font: $sans-serif;
+}
+
+.login-form-box {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  margin-left: -220px;
+  width: 390px;
+  padding: 25px;
+  background: #fff;
+  z-index: 3;
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+
+.input {
+  margin: 0 0 3px 0;
+}
+
+.input  label {
+  display: block;
+  font-weight: 700;
+  font: $sans-serif;
+  padding: 0 0 5px 0;
+}
+.login-form-box h2 {
+  font: $sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+.login-form-box p {
+  font: $sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+.input input{
+  display: block;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 1px;
+  font: $sans-serif;
+  width: calc(100% - 22px);
+  border-radius: 3px;
+}
+
+.input input:focus,
+.input textarea:focus {
+  border-color: #0c0;
+}

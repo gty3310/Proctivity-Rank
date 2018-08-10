@@ -39,7 +39,6 @@ class SessionForm extends React.Component {
   render() {
 
     let emailInput = () =>{
-      // debugger;
       if (this.props.formType == 'signup'){
         return (
           <label>Email:
@@ -52,39 +51,64 @@ class SessionForm extends React.Component {
       }
     };
 
+    let welcomeLine = () =>{
+      if (this.props.formType == 'signup'){
+        return "Sign Up to Join The Community";
+      }
+      else {
+        return "Log In to Join The Community";
+      }
+    };
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to IdeasHunt!
+          <button
+            className="backButton"
+            onClick={this.props.closeModal}>
+            {'<'}
+          </button>
+          
           <br/>
-          Please {this.props.formType} or {this.props.otherForm}
-          <div onClick={this.props.closeModal} className="close-x">X</div>
+          <h2>
+            {welcomeLine()}
+          </h2>
+          <p>
+            Productivity-Tips Hunt is a community to share and geek out about
+            the most useful productivity tips. Join us :)
+          </p>
           {this.renderErrors()}
           <div className="login-form">
             <br/>
-            <label>Username:
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="login-input"
-              />
-            </label>
+            <div className="input">
+              <label>Username:
+                <input type="text"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  className="login-input"
+                  />
+              </label>
+            </div>
 
             <br/>
-            <label>Password:
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-              />
-            </label>
+            <div className="input">
+              <label>Password:
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="login-input"
+                  />
+              </label>
+            </div>
             <br/>
-            {emailInput()}
+            <div className="input">
+              {emailInput()}
+            </div>
             <br/>
-            <input className="session-submit" type="submit"
+            <input className="session-submit orange-button" type="submit"
               value={this.props.formType} />
           </div>
         </form>
+        <div className="modal-screen"></div>
       </div>
     );
   }
