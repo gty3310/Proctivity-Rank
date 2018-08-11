@@ -1,5 +1,4 @@
 /* PHASE 0: Reset */
-@import "base/fonts.scss";
 
 html, body, header, nav, h1, a,
 ul, li, strong, main, button, i,
@@ -10,13 +9,18 @@ span, article, footer, time, small {
   padding: 0;
   border: 0;
   outline: 0;
-  font: $sans-serif;
   color: inherit;
+  font: "Open Sans", sans-serif;
   text-align: inherit;
   text-decoration: inherit;
   vertical-align: inherit;
   box-sizing: inherit;
   background: transparent;
+}
+
+p {
+  font-size: 15px;
+  line-height: 170%;
 }
 
 ul {

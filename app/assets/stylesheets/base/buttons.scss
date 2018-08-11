@@ -12,7 +12,7 @@ button {
 	background-color: $white;
   border: 1px solid $gray;
   align-items: center;
-  padding: 6px 13px;
+  padding: 6px 15px;
 }
 
 .orange-button {
@@ -21,7 +21,7 @@ button {
   border: 1px solid $orange;
   color: white;
   align-items: center;
-  padding: 6px 13px;
+  padding: 6px 15px;
 }
 
 .orange-button:hover {
@@ -38,6 +38,11 @@ button {
   &:hover{
     opacity: 0.8;
   }
+}
+
+.large-size{
+  padding: 10px 24px;
+  font-size: 11px;
 }
 
 

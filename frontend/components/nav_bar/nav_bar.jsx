@@ -6,39 +6,66 @@ class NavBar extends React.Component {
     super(props);
   }
   render(){
+    let hasBanner = "";
+    //this is for welcome banner
+    if (this.props.currentUser){
+      hasBanner = "ghost";
+    }
+
     const sessionView = () =>{
       const sessionLinks = () => (
         <nav className="login-signup">
-          <button className="white-button" onClick={() =>
-              this.props.openModal('login')}>
-              LOG IN
-            </button>
-            <button className="orange-button" onClick={() =>
-                this.props.openModal('signup')}>
-                SIGN UP
-              </button>
-            </nav>
-          );
-          const personalGreeting = () => (
-            <hgroup className="header-group">
-              <button className="white-button" onClick={this.props.logout}>
-                  Log Out</button>
-              <img className="user_img" src={`${this.props.currentUser.imageUrl}`}></img>
-            </hgroup>
-          );
-          return this.props.currentUser ? personalGreeting() : sessionLinks();
+          <button className="white-button medium-size" onClick={() =>
+            this.props.openModal('login')}>
+            LOG IN
+          </button>
+          <button className="orange-button medium-size" onClick={() =>
+            this.props.openModal('signup')}>
+            SIGN UP
+          </button>
+        </nav>
+      );
+      const personalGreeting = () => (
+        <hgroup className="header-group">
+          <button className="white-button medium-size" onClick={this.props.logout}>
+              Log Out</button>
+          <img className="user_img" src={`${this.props.currentUser.imageUrl}`}></img>
+        </hgroup>
+      );
+      return this.props.currentUser ? personalGreeting() : sessionLinks();
     };
 
     return (
-      <div className="main-nav">
-        <div className="nav-bar-left-half">
-          <div className="logo">
-            <img src="https://i.imgur.com/iRzrFIR.png"/>
+      <div>
+        <div className="main-nav">
+          <div className="nav-bar-left-half">
+            <div className="logo">
+              <img src="https://i.imgur.com/iRzrFIR.png"/>
+            </div>
+            <div className="search-bar"></div>
           </div>
-          <div className="search-bar"></div>
+          <div className="nav-bar-right-half">
+            {sessionView()}
+          </div>
         </div>
-        <div className="nav-bar-right-half">
-          {sessionView()}
+        <div className={hasBanner}>
+          <div className="banner">
+            <div className="banner-left">
+              <h2>Discover your next favorite productivity tip</h2>
+              <p>Productivity Tip Hunt surfaces the best productivity tips for digital age.
+                It is a place for productivity enthusiasts
+                to share and geek out about the greatest productivity tips,
+                and PRODUCTIVITY TIPS ONLY.</p>
+              <button className="orange-button large-size" onClick={() =>
+                  this.props.openModal('signup')}>
+                  SIGN UP
+              </button>
+            </div>
+            <div className="banner-right">
+              <img src="https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1533948336/ph_kitty.png"
+                ></img>
+            </div>
+          </div>
         </div>
       </div>
     );
