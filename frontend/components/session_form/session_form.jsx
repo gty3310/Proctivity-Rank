@@ -40,6 +40,7 @@ class SessionForm extends React.Component {
             {error}
           </li>
         ))}
+        <br/>
       </ul>
     );
   }
@@ -87,7 +88,6 @@ class SessionForm extends React.Component {
             Productivity-Tips Hunt is a community to share and geek out about
             the most useful productivity tips. Join us :)
           </p>
-          {this.renderErrors()}
           <div className="login-form">
             <br/>
             <div className="input">
@@ -100,7 +100,6 @@ class SessionForm extends React.Component {
               </label>
             </div>
 
-            <br/>
             <div className="input">
               <label>Password:
                 <input type="password"
@@ -110,12 +109,12 @@ class SessionForm extends React.Component {
                   />
               </label>
             </div>
-            <br/>
+
             <div className="input">
               {emailInput()}
             </div>
-            <br/>
-            <input className="session-submit white-button medium-size" type="submit"
+            {this.renderErrors()}
+            <input className="session-submit orange-button medium-size" type="submit"
               value={this.props.formType} />
             {demoUserButton}
           </div>
