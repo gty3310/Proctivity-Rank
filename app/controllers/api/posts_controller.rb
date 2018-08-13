@@ -2,8 +2,9 @@ class Api::PostsController < ApplicationController
   before_action :require_logged_in, only: [:create]
 
   def create
-    debugger;
+    # debugger;
     @post = Post.new(post_params)
+    @post.user_id = current_user.id
     if @post.save
       render :show
     else
