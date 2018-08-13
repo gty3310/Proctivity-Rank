@@ -19,9 +19,10 @@ const App = () => (
     <header>
       <NavBarContainer />
     </header>
-    <switch>
+    <Switch>
       <Route exact path='/' component={Home} />
-    </switch>
+      <Redirect to='/'/>
+    </Switch>
   </div>
 );
 
