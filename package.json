@@ -2,8 +2,7 @@
   "name": "IdeasHunt",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --mode=development --watch"
+    "postinstall": "webpack"
   },
   "dependencies": {
     "babel-core": "^6.26.3",
@@ -17,6 +16,7 @@
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0"
   },
@@ -26,6 +26,10 @@
   "directories": {
     "lib": "lib",
     "test": "test"
+  },
+  "engines": {
+    "node": "8.4.0",
+    "npm": "6.1.0"
   },
   "devDependencies": {},
   "repository": {
