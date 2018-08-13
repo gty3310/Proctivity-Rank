@@ -14,12 +14,13 @@
   top: 100px;
   left: 50%;
   margin-left: -220px;
-  width: 390px;
+  width: 430px;
   padding: 25px;
   background: #fff;
   z-index: 3;
   border-radius: 5px;
   border: 1px solid #000;
+  font-family: $sans-serif;
 }
 
 .input {
@@ -29,16 +30,13 @@
 .input  label {
   display: block;
   font-weight: 700;
-  font: $sans-serif;
   padding: 0 0 5px 0;
 }
 .login-form-box h2 {
-  font: $sans-serif;
   font-size: 20px;
   text-align: center;
 }
 .login-form-box p {
-  font: $sans-serif;
   font-size: 16px;
   text-align: center;
 }
@@ -49,7 +47,6 @@
   border: 1px solid #ccc;
   padding: 5px;
   margin-bottom: 1px;
-  font: $sans-serif;
   width: calc(100% - 22px);
   border-radius: 3px;
 }
