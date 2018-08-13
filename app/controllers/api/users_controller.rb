@@ -4,6 +4,10 @@ class Api::UsersController < ApplicationController
     if @user.save
       login(@user)
       render :show
+    elsif User.find_by_username(@user.username)
+      render json: ["Username is taken, lets try to be more creative"], status: 422
+    elsif User.find_by_email(@user.email)
+      render json: ["Someone have already registored with this email, please try to go log in instead"], status: 422
     else
       render json: ["Invalid username/password/email"], status: 422
     end
