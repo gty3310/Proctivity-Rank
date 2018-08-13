@@ -11,6 +11,7 @@ class SessionForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.loginDemoUser = this.loginDemoUser.bind(this);
+    this.closeModalAction = this.closeModalAction.bind(this);
   }
 
   update(field) {
@@ -45,6 +46,11 @@ class SessionForm extends React.Component {
     );
   }
 
+  closeModalAction(){
+    this.props.clearErrors();
+    this.props.closeModal();
+  }
+
   render() {
     let demoUserButton = null;
     let welcomeLine = null;
@@ -61,7 +67,6 @@ class SessionForm extends React.Component {
       }
     };
 
-
     if (this.props.formType == 'signup'){
       welcomeLine = "Sign Up to Join The Community";
     }
@@ -76,7 +81,9 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <button
             className="backButton"
-            onClick={this.props.closeModal}>
+            onClick={
+              this.closeModalAction
+            }>
             {'<'}
           </button>
 
