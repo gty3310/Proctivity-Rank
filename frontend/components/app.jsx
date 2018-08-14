@@ -14,7 +14,7 @@ import SignupFormContainer from './session_form/signup_form_container';
 import Home from './home/home_container';
 
 const App = () => (
-  <div>
+  <div className="wholeSite">
     <Modal />
     <header>
       <NavBarContainer />

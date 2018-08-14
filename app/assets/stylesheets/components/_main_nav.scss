@@ -6,7 +6,8 @@
   margin: 0 auto;
   // left and right
   justify-content: space-between;
-    border-bottom: 1px solid $gray;
+  border-bottom: 1px solid $gray;
+  background-color: white;
 }
 
 .nav-bar-left-half {
@@ -31,7 +32,6 @@
 	justify-content: flex-end;
   .login-signup {
     display: inline-block;
-
   }
   .header-group {
     display: flex;
@@ -56,11 +56,13 @@
 
 .banner {
   // display: flex;
+  justify-content: center;
   display: inline-grid;
   grid-template-columns: 50% 10% 40%;
   align-items: center;
   min-width: 110px;
   height: 375px;
+  background-color: white;
 
   .banner-left{
     grid-column-start: 1;
@@ -82,5 +84,9 @@
     grid-column-start: 3;
     grid-column-end: 3;
     align-items: center;
+    img{
+      max-width: 371px;
+      max-height: 375px;
+    }
   }
 }
