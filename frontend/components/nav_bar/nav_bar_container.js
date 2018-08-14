@@ -19,7 +19,5 @@ const mdp = (dispatch, ownProps) => {
     openModal: modal => dispatch(openModal(modal))
   };
 };
-// also return fetchUser
-//also return fetch all products
 
 export default withRouter(connect(msp, mdp)(NavBar));

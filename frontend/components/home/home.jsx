@@ -1,5 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import PostIndexContainer from '../posts/post_index_container';
+
 
 class Home extends React.Component {
   constructor(props) {
@@ -9,6 +11,7 @@ class Home extends React.Component {
     return (
       <div>
         <p>Home</p>
+        <PostIndexContainer />
       </div>
     );
   }
