@@ -14,7 +14,6 @@ class PostIndex extends React.Component {
     // console.log(this.props.posts);
     const list = this.props.posts.map(post => {
       return (
-
         <div key={post.id} className="indexItem">
           <div className="postimg">
             <img src={`${post.imageUrl}`} />
