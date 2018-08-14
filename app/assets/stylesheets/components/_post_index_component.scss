@@ -47,5 +47,7 @@
       text-transform: capitalize;
     }
   }
-
+}
+.postIndexList .indexItem:hover{
+  background-color: $background-gray;
 }

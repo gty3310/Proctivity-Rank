@@ -9,7 +9,7 @@ class PostShow extends React.Component {
     this.props.fetchPost(this.props.match.params.postId);
   }
   render(){
-    // debugger;
+
     if (!this.props.post) {
       return (
         <div>
@@ -39,6 +39,15 @@ class PostShow extends React.Component {
             <img src={`${this.props.post.snapshootUrlThree}`}/>
             <img src={`${this.props.post.snapshootUrlFour}`}/>
             <img src={`${this.props.post.snapshootUrlFive}`}/>
+          </div>
+          <br/>
+          <div className="description">
+            <p>
+              {this.props.post.description}
+            </p>
+          </div>
+          <div className="comments">
+
           </div>
         </div>
       </div>

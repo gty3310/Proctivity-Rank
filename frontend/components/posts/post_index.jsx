@@ -14,21 +14,26 @@ class PostIndex extends React.Component {
     // console.log(this.props.posts);
     const list = this.props.posts.map(post => {
       return (
-        <div key={post.id} className="indexItem">
-          <div className="postimg">
-            <img src={`${post.imageUrl}`} />
-          </div>
-          <div className="postinfo">
-            <div className="postTitle">{post.name}</div>
-            <div className="postDescription">
-              {post.tagline}
-              <br/>
-              by {post.username}
+        <Link
+              to={`/posts/${post.id}`}
+              style= {{textDecoration: 'none'}}>
+          <div key={post.id} className="indexItem">
+            <div className="postimg">
+              <img src={`${post.imageUrl}`} />
+            </div>
+            <div className="postinfo">
+              <div className="postTitle">{post.name}</div>
+              <div className="postDescription">
+                {post.tagline}
+                <br/>
+                by {post.username}
+              </div>
             </div>
           </div>
-        </div>
+        </Link>
       );
     });
+
     return (
       <div className="postIndexList">
         {list}
