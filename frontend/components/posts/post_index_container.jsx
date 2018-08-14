@@ -4,7 +4,7 @@ import PostIndex from './post_index';
 
 const msp = ({entities: {posts}}) => {
   return {
-    post: Object.values(posts)
+    posts: Object.values(posts)
   };
 };
 
