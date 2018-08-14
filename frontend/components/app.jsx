@@ -21,6 +21,7 @@ const App = () => (
     </header>
     <Switch>
       <Route exact path='/' component={Home} />
+      <Redirect to='/' />
     </Switch>
   </div>
 );
