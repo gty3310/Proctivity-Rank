@@ -5,16 +5,16 @@ import PostForm from './post_form';
 const msp = ({entities: {posts}}, ownProps) => {
   return {
     post: { name:"", tagline:"", description:"",
-       image_url:"", snapshoot_url_one:"",
-       snapshoot_url_two:"", snapshoot_url_three:"", snapshoot_url_four:"",
-       snapshoot_url_five:""},
+       imageUrl:"", snapshootUrlOne:"",
+       snapshootUrlTwo:"", snapshootUrlThree:"", snapshootUrlFour:"",
+       snapshootUrlFive:""},
     formType:"Create a New Post"
   };
 };
 
 const mdp = (dispatch) => {
   return {
-    createPost: (post) => dispatch(createPost(post))
+    action: (post) => dispatch(createPost(post))
   };
 };
 
