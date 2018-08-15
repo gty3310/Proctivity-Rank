@@ -6,12 +6,15 @@ class PostForm extends React.Component {
     super(props);
     this.state = this.props.post;
   }
+  handleSubmit() {
+
+  }
 
   render(){
-    
+
     return (
       <div>
-        <p>{this.props.formType}</p>
+        
       </div>
     );
   }

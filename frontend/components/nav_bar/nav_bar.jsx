@@ -7,10 +7,15 @@ class NavBar extends React.Component {
   }
   render(){
     //variabes as switch for ghost component
-    let hasBanner = "";
-    if (this.props.currentUser){
-      hasBanner = "ghost";
-    }
+    let hasBanner = () => {
+      if (this.props.currentUser ||
+        this.props.location.pathname !== "/"){
+        return "ghost";
+      }
+      else {
+        return "";
+      }
+    };
     let hasCreatePostButton = () => {
       if (this.props.location.pathname === "/posts/create") {
         return "ghost";
@@ -67,7 +72,7 @@ class NavBar extends React.Component {
           </div>
         </div>
 
-        <div className={hasBanner}>
+        <div className={hasBanner()}>
           <div className="banner">
             <div className="banner-left">
               <h2>Discover your next favorite productivity tip</h2>
