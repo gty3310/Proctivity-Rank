@@ -1,0 +1,27 @@
+.postShow {
+
+}
+.postHeader {
+  margin: 20px;
+  display: flex;
+  .postimg {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.postBody {
+  // background: white;
+  margin: 30px;
+  // border: 1px solid $gray;
+}
+
+.postBody .photoList{
+  background: white;
+  border: 1px solid $gray;
+}
+
+.postBody .description{
+  background: white;
+  border: 1px solid $gray;
+}

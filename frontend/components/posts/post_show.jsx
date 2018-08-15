@@ -20,35 +20,40 @@ class PostShow extends React.Component {
       );
     }
     return (
-      <div className="postShow">
+      <div >
         <div key={this.props.post.id} className="postShow">
-          <div className="postimg">
-            <img src={`${this.props.post.imageUrl}`} />
-          </div>
-          <div className="postinfo">
-            <div className="postTitle">{this.props.post.name}</div>
-            <div className="postDescription">
-              {this.props.post.tagline}
-              <br/>
-              by {this.props.post.username}
+          <div className="postHeader">
+            <div className="postimg">
+              <img src={`${this.props.post.imageUrl}`} />
+            </div>
+            <div className="postinfo">
+              <div className="postTitle">{this.props.post.name}</div>
+              <div className="postDescription">
+                {this.props.post.tagline}
+                <br/>
+                by {this.props.post.username}
+              </div>
             </div>
           </div>
-          <div className="photoList">
-            <img src={`${this.props.post.snapshootUrlOne}`}/>
-            <img src={`${this.props.post.snapshootUrlTwo}`}/>
-            <img src={`${this.props.post.snapshootUrlThree}`}/>
-            <img src={`${this.props.post.snapshootUrlFour}`}/>
-            <img src={`${this.props.post.snapshootUrlFive}`}/>
-          </div>
-          <br/>
-          <div className="description">
-            <p>
-              {this.props.post.description}
-            </p>
-          </div>
-          <div className="comments">
+          <div className="postBody">
+            <div className="photoList">
+              <img src={`${this.props.post.snapshootUrlOne}`}/>
+              <img src={`${this.props.post.snapshootUrlTwo}`}/>
+              <img src={`${this.props.post.snapshootUrlThree}`}/>
+              <img src={`${this.props.post.snapshootUrlFour}`}/>
+              <img src={`${this.props.post.snapshootUrlFive}`}/>
+            </div>
+            <br/>
+            <div className="description">
+              <p>
+                {this.props.post.description}
+              </p>
+            </div>
+            <div className="comments">
 
+            </div>
           </div>
+
         </div>
       </div>
     );
