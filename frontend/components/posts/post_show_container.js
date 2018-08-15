@@ -7,7 +7,6 @@ const msp = ({entities: {posts}}, ownProps) => {
     post: posts[ownProps.match.params.postId]
   };
 };
-// need to add currentPostId
 
 const mdp = (dispatch) => {
   return {
