@@ -2,3 +2,9 @@
  justify-content: center;
  background-color: $background-gray;
 }
+
+//for components that need to sometimes disappear
+.ghost {
+  height: 0px;
+  visibility: hidden;
+}

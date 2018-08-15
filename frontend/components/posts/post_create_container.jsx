@@ -3,7 +3,6 @@ import {createPost} from '../../actions/post_actions';
 import PostForm from './post_form';
 
 const msp = ({entities: {posts}}, ownProps) => {
-  debugger
   return {
     post: { name:"", tagline:"", description:"",
        image_url:"", snapshoot_url_one:"",

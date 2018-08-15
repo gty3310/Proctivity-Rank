@@ -3,6 +3,7 @@ import { fetchPost, fetchPosts, createPost} from '../../actions/post_actions';
 import PostShow from './post_show';
 
 const msp = ({entities: {posts}}, ownProps) => {
+  // debugger
   return {
     post: posts[ownProps.match.params.postId]
   };

@@ -6,12 +6,21 @@ class NavBar extends React.Component {
     super(props);
   }
   render(){
+    //variabes as switch for ghost component
     let hasBanner = "";
-    //this is for welcome banner
     if (this.props.currentUser){
       hasBanner = "ghost";
     }
+    let hasCreatePostButton = () => {
+      if (this.props.location.pathname === "/posts/create") {
+        return "ghost";
+      }
+      else {
+        return "";
+      }
+    };
 
+    //for top right corner buttons
     const sessionView = () =>{
       const sessionLinks = () => (
         <nav className="login-signup">
@@ -25,8 +34,17 @@ class NavBar extends React.Component {
           </button>
         </nav>
       );
+
       const personalGreeting = () => (
         <hgroup className="header-group">
+          <Link
+                to={`/posts/create`}
+                className={hasCreatePostButton()}
+                style= {{textDecoration: 'none'}}>
+              <button className="orange-button medium-size" >
+                  Create Post</button>
+            </Link>
+
           <button className="white-button medium-size" onClick={this.props.logout}>
               Log Out</button>
           <img className="user_img" src={`${this.props.currentUser.imageUrl}`}></img>
@@ -48,6 +66,7 @@ class NavBar extends React.Component {
             {sessionView()}
           </div>
         </div>
+
         <div className={hasBanner}>
           <div className="banner">
             <div className="banner-left">
