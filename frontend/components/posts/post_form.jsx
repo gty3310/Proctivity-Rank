@@ -7,7 +7,7 @@ class PostForm extends React.Component {
     this.state = this.props.post;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
-    this.errors = [''];
+    this.state.errors = [];
   }
   handleInput(field) {
     return (e)=>{
@@ -16,29 +16,40 @@ class PostForm extends React.Component {
   }
 
   renderErrors() {
+    console.log(this.state);
     return(
       <ul>
-        <li>{this.errors[0]}</li>
+        {this.state.errors.map()
+          <li>{this.state.errors[0]}</li>
+        }
       </ul>
     );
   }
 
   handleSubmit(e) {
     e.preventDefault();
+    let errors = [];
 
     if (this.state.name === ""){
-      this.errors=['error'];
-      console.log(this.errors[0]);
-    } else if (this.state.tagline === "") {
-    } else if (this.state.description === "") {
+      errors.push("Name cannot be empty");
     }
-    else {
+     if (this.state.tagline === "") {
+       errors.push("Tagline cannot be empty");
+    }
+     if (this.state.description === "") {
+       errors.push("Description cannot be empty");
+    }
+    if (errors.length === 0) {
+      this.setState({errors: []});
         this.props.action(this.state).then(()=>{
           //fetch post to get post's id, and push history to that place
 
           this.props.history.push("/");
         }
       );
+    }
+    else{
+      this.setState({errors: errors});
     }
   }
 
