@@ -19,7 +19,12 @@ class PostForm extends React.Component {
     // console.log(this.state);
     return(
       <ul>
-          <li>{this.state.errors[0]}</li>
+        {this.state.errors.map(error=> {
+          return (
+            <li>{error}</li>
+          );
+        })
+        }
       </ul>
     );
   }
@@ -41,7 +46,6 @@ class PostForm extends React.Component {
       this.setState({errors: []});
         this.props.action(this.state).then(()=>{
           //fetch post to get post's id, and push history to that place
-
           this.props.history.push("/");
         }
       );
@@ -167,6 +171,7 @@ class PostForm extends React.Component {
 
             <br/>
             {this.renderErrors()}
+            <br/>
           <input type="submit" className="orange-button" value="Submit"/>
         </form>
       </div>
