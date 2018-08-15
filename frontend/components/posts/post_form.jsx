@@ -16,12 +16,10 @@ class PostForm extends React.Component {
   }
 
   renderErrors() {
-    console.log(this.state);
+    // console.log(this.state);
     return(
       <ul>
-        {this.state.errors.map()
           <li>{this.state.errors[0]}</li>
-        }
       </ul>
     );
   }
