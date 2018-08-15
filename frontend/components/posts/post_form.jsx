@@ -44,9 +44,11 @@ class PostForm extends React.Component {
     }
     if (errors.length === 0) {
       this.setState({errors: []});
-        this.props.action(this.state).then(()=>{
+        this.props.action(this.state).then((action)=>{
+          // console.log(post);
+          // debugger;
           //fetch post to get post's id, and push history to that place
-          this.props.history.push("/");
+          this.props.history.push(`/posts/${action.post.id}`);
         }
       );
     }
