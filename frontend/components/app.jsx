@@ -22,9 +22,9 @@ const App = () => (
       <NavBarContainer />
     </header>
     <Switch>
-      <Route exact path='/' component={Home} />
       <Route exact path='/posts/create' component={PostCreateContainer}/>
-      <Route exact path='/posts/:postId' component={PostShowContainer}/>
+      <Route path='/posts/:postId' component={PostShowContainer}/>
+      <Route exact path='/' component={Home} />
       <Redirect to='/' />
     </Switch>
   </div>
