@@ -44,8 +44,8 @@ class PostForm extends React.Component {
 
   render(){
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
+      <div className="postFormContainer">
+        <form className="postForm" onSubmit={this.handleSubmit}>
           <h1>{this.props.formType}</h1>
 
             <div className="postFormInputItem">
@@ -158,7 +158,7 @@ class PostForm extends React.Component {
 
             <br/>
             {this.renderErrors()}
-          <input type="submit" value={this.props.formType}/>
+          <input type="submit" className="orange-button" value="Submit"/>
         </form>
       </div>
     );

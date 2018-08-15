@@ -50,6 +50,7 @@ input[type=submit] {
   font-weight: bold;
   margin-left: 0;
 	border-radius: 3px;
+  border: 1px solid $gray;
 	transition: background-color 0.3s;
 	font-family: $sans-serif;
 	text-transform: uppercase;
