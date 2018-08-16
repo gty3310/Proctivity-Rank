@@ -5,20 +5,20 @@ class PostShow extends React.Component {
   // constructor(props) {
   //   super(props);
   // }
-  // componentDidMount(){
-  //   debugger
-  //   this.props.fetchPost(this.props.match.params.postId);
-  // }
+  componentDidMount(){
+    this.props.fetchPost(this.props.match.params.postId);
+  }
   render(){
     if (!this.props.post) {
       return (
         <div>
           <h1>
-            The post you are looking for does not exist
+            Loading...
           </h1>
         </div>
       );
     }
+    // debugger;
     return (
       <div >
         <div key={this.props.post.id} className="postShow">

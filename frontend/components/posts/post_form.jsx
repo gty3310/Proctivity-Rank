@@ -31,6 +31,7 @@ class PostForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    // debugger;
     let errors = [];
 
     if (this.state.name === ""){
