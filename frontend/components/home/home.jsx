@@ -10,7 +10,6 @@ class Home extends React.Component {
   render(){
     return (
       <div>
-        <p>Home</p>
         <PostIndexContainer />
       </div>
     );

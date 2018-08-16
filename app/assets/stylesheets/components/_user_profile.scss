@@ -1,0 +1,23 @@
+.userProfile{
+  flex: 1;
+  width: 100%;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: white;
+  font-family: $sans-serif;
+
+
+  .user_img_container{
+    margin-left: 20%;
+    margin-right: 20%;
+    width: auto;
+    height: auto;
+    max-width: 500px;
+    max-height: 500px;
+  }
+
+}

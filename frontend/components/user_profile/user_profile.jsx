@@ -10,19 +10,20 @@ class userProfile extends React.Component {
           <img className="user_img" src={`${this.props.user.imageUrl}`}></img>
         </div>
         <div className="username_container">
-          <h2 className="username">{`${this.props.user.username}`}</h2>
+          <h1 className="username">{`${this.props.user.username}`}</h1>
         </div>
         <div className="email_container">
-          <h2 className="email">{`${this.props.user.email}`}</h2>
+          <h3 className="email">{`${this.props.user.email}`}</h3>
         </div>
         <div className="headline_container">
-          <h2 className="headline">{`${this.props.user.headline}`}</h2>
+          <h3 className="headline">{`${this.props.user.headline}`}</h3>
         </div>
+        <br/>
         <div className="post_create_button_container">
           <Link
             to={`/posts/create`}
             style= {{textDecoration: 'none'}}>
-            <button className="orange-button medium-size" >
+            <button className="orange-button large-size" >
               Create Post</button>
           </Link>
         </div>
