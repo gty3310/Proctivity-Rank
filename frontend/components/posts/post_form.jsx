@@ -112,6 +112,7 @@ class PostForm extends React.Component {
                 onChange={this.handleInput("imageUrl")}/>
             </div>
 
+            {/*}
             <div className="postFormInputItem">
               <h4>
                  First Image
@@ -171,6 +172,7 @@ class PostForm extends React.Component {
                 placeholder="Enter the url for a image for this idea"
                 onChange={this.handleInput("snapshootUrlFive")}/>
             </div>
+          */}
 
             <br/>
             {this.renderErrors()}
