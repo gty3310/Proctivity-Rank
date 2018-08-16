@@ -6,5 +6,6 @@
 //for components that need to sometimes disappear
 .ghost {
   height: 0px;
+  width: 0px;
   visibility: hidden;
 }

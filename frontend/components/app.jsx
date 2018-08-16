@@ -15,6 +15,7 @@ import PostShowContainer from './posts/post_show_container';
 import PostCreateContainer from './posts/post_create_container';
 import Home from './home/home_container';
 import {AuthRoute, ProtectedRoute} from '../util/route_util';
+import UserProfileContainer from './user_profile/user_profile_container';
 
 const App = () => (
   <div className="wholeSite">
@@ -23,6 +24,7 @@ const App = () => (
       <NavBarContainer />
     </header>
     <Switch>
+      <Route exact path='/user/:userId' component={UserProfileContainer}/>
       <ProtectedRoute exact path='/posts/create' component={PostCreateContainer}/>
       <Route path='/posts/:postId' component={PostShowContainer}/>
       <Route exact path='/' component={Home} />

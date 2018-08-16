@@ -24,6 +24,14 @@ class NavBar extends React.Component {
         return "";
       }
     };
+    let isOnProfilePage = () => {
+      if (this.props.location.pathname === `/user/${this.props.currentUser.id}`) {
+        return "ghost";
+      }
+      else {
+        return "";
+      }
+    };
 
     //for top right corner buttons
     const sessionView = () =>{
@@ -48,11 +56,25 @@ class NavBar extends React.Component {
                 style= {{textDecoration: 'none'}}>
               <button className="orange-button medium-size" >
                   Create Post</button>
-            </Link>
+          </Link>
+
+          <Link
+                to={`/user/${this.props.currentUser.id}`}
+                className={isOnProfilePage()}>
+                <button className="white-button medium-size" >
+                    Profile</button>
+          </Link>
 
           <button className="white-button medium-size" onClick={this.props.logout}>
               Log Out</button>
-          <img className="user_img" src={`${this.props.currentUser.imageUrl}`}></img>
+
+        <Link
+              to={`/user/${this.props.currentUser.id}`}>
+              <div>
+                <img className="user_img" src={`${this.props.currentUser.imageUrl}`}></img>
+              </div>
+        </Link>
+
         </hgroup>
       );
       return this.props.currentUser ? personalGreeting() : sessionLinks();

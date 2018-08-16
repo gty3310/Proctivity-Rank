@@ -9,9 +9,6 @@ class PostShow extends React.Component {
     this.props.fetchPost(this.props.match.params.postId);
   }
   render(){
-
-
-
     if (!this.props.post) {
       return (
         <div>
