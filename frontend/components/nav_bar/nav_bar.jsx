@@ -62,9 +62,12 @@ class NavBar extends React.Component {
       <div>
         <div className="main-nav">
           <div className="nav-bar-left-half">
+          <Link
+                to={`/`}>
             <div className="logo">
               <img src="https://i.imgur.com/iRzrFIR.png"/>
             </div>
+          </Link>
             <div className="search-bar"></div>
           </div>
           <div className="nav-bar-right-half">
