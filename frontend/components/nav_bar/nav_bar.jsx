@@ -91,6 +91,8 @@ class NavBar extends React.Component {
               <img src="https://i.imgur.com/iRzrFIR.png"/>
             </div>
           </Link>
+          </div>
+          <div className="nav-bar-middle-half">
             <div className="search-bar">
               <SearchBarContainer/>
             </div>

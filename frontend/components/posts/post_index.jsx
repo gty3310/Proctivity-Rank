@@ -7,37 +7,24 @@ class PostIndex extends React.Component {
     this.state = {posts: this.props.posts};
   }
   componentDidMount(){
-    // debugger;
     this.props.fetchPosts();
-    // this.setState({posts: this.props.posts});
   }
 
+  //compare the old and new filteredPosts only after making sure it is exiting
   componentWillReceiveProps(nextProps) {
-    //compare the old and new filteredPosts only after making sure it is exiting
-    // debugger;
     if (this.props.filteredPosts && nextProps.filteredPosts){
-      // debugger;
-
-      // if(this.props.filteredPosts.length > 0 && nextProps.filteredPosts > 0){
-        if (this.props.filteredPosts !== nextProps.filteredPosts) { //delete this line will make everything show up at begining
+      if(nextProps.filteredPosts.length === 0) {
+        this.setState({posts: nextProps.posts});
+        return;
+      }
+      if (this.props.filteredPosts.length !== nextProps.filteredPosts.length ) { //delete this line will make everything show up at begining
           this.setState({posts: nextProps.filteredPosts});
-          // debugger;
-        }
-      // }
-      //  else {
-      //   this.setState({posts: this.props.posts});
-      // }
+      }
     }
-    // else {
-    //   this.setState({posts: this.props.posts});
-    // }
   }
 
   render(){
-    // debugger;
-    // // console.log(this.props);
-    // console.log(this.props.posts);
-
+    // debugger
     const list = this.state.posts.map(post => {
       return (
         <Link
@@ -60,6 +47,9 @@ class PostIndex extends React.Component {
       );
     });
 
+    if (this.state.posts[0] === "No matches"){
+      return (<h1>There is no result</h1>);
+    }
     return (
       <div className="postIndexList">
         {list}
