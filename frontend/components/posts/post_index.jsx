@@ -31,15 +31,21 @@ class PostIndex extends React.Component {
           to={`/posts/${post.id}`}
           style= {{textDecoration: 'none'}}>
           <div key={post.id} className="indexItem">
-            <div className="postimg">
-              <img src={`${post.imageUrl}`} />
-            </div>
-            <div className="postinfo">
-              <div className="postTitle">{post.name}</div>
-              <div className="postDescription">
-                {post.tagline}
-                <br/>
-                by {post.username}
+            <div className="indexItemInner">
+              <div className="postimg">
+                <img src={`${post.imageUrl}`} />
+              </div>
+              <div className="postinfo">
+                <div className="postTitle">
+                  <p>
+                    {post.name}
+                  </p>
+                </div>
+                <div className="postDescription">
+                  {post.tagline}
+                  <br/>
+                  by {post.username}
+                </div>
               </div>
             </div>
           </div>
