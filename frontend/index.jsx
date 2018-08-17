@@ -5,10 +5,12 @@ import * as postApiUtil from './util/post_api_util'
 import * as sessionAction from './actions/session_actions'
 import configureStore from './store/store';
 import Root from './components/root';
+import Fingerprint2 from 'fingerprintjs2';
 
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
+  let browserFingerprint = "";
   //store window.currentUser to redux global state, allow page refresh
   if (window.currentUser) {
     const preloadedState = {
@@ -24,6 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // TESTING START
+  new Fingerprint2().get(function(result, components) {
+    browserFingerprint = result;
+  });
+  //get current minuate
+  console.log(new Date().getTime() / 60000);
+
   window.createPost = postApiUtil.createPost;
   window.fetchPosts = postApiUtil.fetchPosts;
   window.signup = sessionAction.signup;
