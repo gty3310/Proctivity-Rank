@@ -2,8 +2,10 @@ import * as APIUtil from '../util/post_api_util';
 export const RECEIVE_POST = 'RECEIVE_POST';
 // export const REMOVE_POST = 'REMOVE_POST';
 export const RECEIVE_POSTS = 'RECEIVE_POSTS';
+export const RECEIVE_FILTERED_POSTS = 'RECEIVE_FILTERED_POSTS';
 export const RECEIVE_POST_ERRORS = 'RECEIVE_POST_ERRORS';
 export const CLEAR_ERRORS = 'CLEAR_ERRORS';
+
 
 const receivePost = (post) => ({
   type: RECEIVE_POST,
@@ -34,6 +36,9 @@ export const createPost = (post) => {
   };
 };
 
+export const updateFilteredPosts = (filteredPosts) => dispatch => {
+  return dispatch({type: RECEIVE_FILTERED_POSTS, filteredPosts: filteredPosts});
+};
 // export const updatePost = (post) => {
 //   return dispatch => {
 //     return APIUtil.updatePost(post).then(postCome => {

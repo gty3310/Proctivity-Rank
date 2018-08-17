@@ -2,9 +2,10 @@ import { connect } from 'react-redux';
 import { fetchPost, fetchPosts, createPost} from '../../actions/post_actions';
 import PostIndex from './post_index';
 
-const msp = ({entities: {posts}}) => {
+const msp = ({entities: {posts, filteredPosts}}) => {
   return {
-    posts: Object.values(posts)
+    posts: Object.values(posts),
+    filteredPosts: Object.values(filteredPosts)
   };
 };
 
