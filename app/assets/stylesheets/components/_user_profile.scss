@@ -10,14 +10,17 @@
   background-color: white;
   font-family: $sans-serif;
 
-
   .user_img_container{
     margin-left: 20%;
     margin-right: 20%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     width: auto;
     height: auto;
     max-width: 500px;
     max-height: 500px;
+    img{
+      border-radius: 50%;
+    }
   }
-
 }

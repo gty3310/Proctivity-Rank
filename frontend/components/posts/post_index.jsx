@@ -8,15 +8,23 @@ class PostIndex extends React.Component {
   componentDidMount(){
     this.props.fetchPosts();
   }
+
+  // componentWillReceiveProps(nextProps) {
+  //   if (this.props.filteredPosts.length != nextProps.filteredPosts.length) {
+  //     this.props.fetchPost(nextProps.match.params.postId);
+  //   }
+  // }
+
   render(){
     // debugger;
     // // console.log(this.props);
     // console.log(this.props.posts);
+
     const list = this.props.posts.map(post => {
       return (
         <Link
-              to={`/posts/${post.id}`}
-              style= {{textDecoration: 'none'}}>
+          to={`/posts/${post.id}`}
+          style= {{textDecoration: 'none'}}>
           <div key={post.id} className="indexItem">
             <div className="postimg">
               <img src={`${post.imageUrl}`} />

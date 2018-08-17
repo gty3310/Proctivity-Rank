@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchBarContainer from './search_bar_container';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -90,7 +91,9 @@ class NavBar extends React.Component {
               <img src="https://i.imgur.com/iRzrFIR.png"/>
             </div>
           </Link>
-            <div className="search-bar"></div>
+            <div className="search-bar">
+              <SearchBarContainer/>
+            </div>
           </div>
           <div className="nav-bar-right-half">
             {sessionView()}
