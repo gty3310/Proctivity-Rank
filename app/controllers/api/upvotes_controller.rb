@@ -10,7 +10,6 @@ class Api::UpvotesController < ApplicationController
   end
 
   def destroy
-    # add if statement
     if upvote_params[:user_id]
       @upvote = Upvote.where('user_id = ? AND post_id = ?',
         upvote_params[:user_id],upvote_params[:post_id])

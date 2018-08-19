@@ -6,7 +6,6 @@ export const RECEIVE_FILTERED_POSTS = 'RECEIVE_FILTERED_POSTS';
 export const RECEIVE_POST_ERRORS = 'RECEIVE_POST_ERRORS';
 export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 
-
 const receivePost = (post) => ({
   type: RECEIVE_POST,
   post: post
