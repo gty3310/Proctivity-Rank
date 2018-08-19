@@ -33,3 +33,11 @@ Productivity Rank was designed with simplicity and elegance as its primary goals
 Rails was chosen due to its out-of-the-box support for relational databases and RESTful architecture.
 
 Frontend Redux states are set up in a way such that there are separate reducers and actions for stories, comments, likes, follows, users, and errors. This keeps the state normalized, easing the task of keeping things up-to-date with changes in the database.
+
+
+
+- [ ] Logged In users can create and read comments
+- [ ] comments are displayed on post pages
+- [ ] Adequate styling
+- [ ] Smooth, bug-free navigation
+- [ ] Adequate and appropriate seeds to demonstrate feature
