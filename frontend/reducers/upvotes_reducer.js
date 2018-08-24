@@ -8,7 +8,8 @@ const UpvoteReducer = (oldState = {}, action) => {
   switch (action.type) {
     case RECEIVE_UPVOTE:
       let postId = oldState.postId;
-      //here should increase/decrease the number of upvotes 
+      
+      //here should increase/decrease the number of upvotes
 
     default:
       return oldState;
