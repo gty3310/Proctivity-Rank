@@ -61,10 +61,10 @@ ActiveRecord::Base.transaction do
   # Post2.user = users.sample
   Post2.save
 
-  Post3 = Post.new(name: "Search through the pictures you have taken by discribing them")
+  Post3 = Post.new(name: "Find pictures you have taken by discribing them")
   Post3.description = "I can search somethings like 'black bird' or 'golden bridge' -- Ti Guo"
   Post3.user_id = user4.id
-  Post3.tagline = "[All Platforms | photos.google.com] Google's photo managing app"
+  Post3.tagline = "[photos.google.com] Google's photo managing app"
   Post3.image_url = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539119811/gf.png"
   # Post3.snapshoot_url_one = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539117811/focusmatescreen.png"
   # Post3.user = users.sample
@@ -79,16 +79,16 @@ ActiveRecord::Base.transaction do
   # Post4.user = users.sample
   Post4.save
 
-  Post5 = Post.new(name: "Get notification when receiver opened your email")
+  Post5 = Post.new(name: "Get notification when your email gets opened")
   Post5.description = ""
   Post5.user_id = user4.id
   Post5.tagline = "[Chrome | hubspot.com/products/sales] Chrome extension that tracks when your email gets read even when no reply"
-  Post5.image_url = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539121725/hubspot-sales.png"
+  Post5.image_url = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539123016/hubspot.png"
   # Post5.snapshoot_url_one = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539117811/focusmatescreen.png"
   # Post5.user = users.sample
   Post5.save
 
-  Post6 = Post.new(name: "Create keyboard shortcut for automating any tasks on computer")
+  Post6 = Post.new(name: "Create shortcut for automating any computer tasks")
   Post6.description = ""
   Post6.user_id = user4.id
   Post6.tagline = "[Windows | autohotkey.com] AutoHotkey automates keystrokes and mouse clicks to more efficiently handle repetitive tasks"
@@ -96,4 +96,13 @@ ActiveRecord::Base.transaction do
   # Post6.snapshoot_url_one = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539117811/focusmatescreen.png"
   # Post6.user = users.sample
   Post6.save
+
+  Post7 = Post.new(name: "Use any software to trigger any other software")
+  Post7.description = ""
+  Post7.user_id = user4.id
+  Post7.tagline = "[IFTTT.com] IFTTT (if this, then that) is the easy, free way to get your apps and devices working together."
+  Post7.image_url = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539123016/ifttt.png"
+  # Post7.snapshoot_url_one = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539117811/focusmatescreen.png"
+  # Post7.user = users.sample
+  Post7.save
 end
