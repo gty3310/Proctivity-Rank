@@ -41,23 +41,59 @@ ActiveRecord::Base.transaction do
   user3.save
   user4.save
 
-  Post1 = Post.new(name: "On-demand peer pressure on FocusMate")
+  Post1 = Post.new(name: "Find On-demand peer pressure")
   Post1.description = "
   www.focusmate.com
   When I am not able to focus on working, I use this site to book 1-hour work sessions with Accountability Partners. -- Ti Guo"
   Post1.user_id = user4.id
-  Post1.tagline = "Real Time Accountability Partner Pairing site. Mac/Windows"
+  Post1.tagline = "[Mac/Windows | focusmate.com] Real Time Accountability Partner Pairing site. "
   Post1.image_url = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539117103/fs.png"
   Post1.snapshoot_url_one = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539117811/focusmatescreen.png"
   # Post1.user = users.sample
   Post1.save
 
-  Post2 = Post.new(name: "Copy paste multiple clips at the same time using Paste")
+  Post2 = Post.new(name: "Copy paste multiple clips at the same time")
   Post2.description = "Clipboard Management Software is one type of software that significantly improved my productivity. -- Ti Guo"
   Post2.user_id = user4.id
-  Post2.tagline = "Clipboard Management Software. Mac"
+  Post2.tagline = "[Mac | pasteapp.com] Clipboard Management Software. "
   Post2.image_url = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539118300/paste-mac.png"
   # Post2.snapshoot_url_one = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539117811/focusmatescreen.png"
   # Post2.user = users.sample
   Post2.save
+
+  Post3 = Post.new(name: "Search through the pictures you have taken by discribing them")
+  Post3.description = "I can search somethings like 'black bird' or 'golden bridge' -- Ti Guo"
+  Post3.user_id = user4.id
+  Post3.tagline = "[All Platforms | photos.google.com] Google's photo managing app"
+  Post3.image_url = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539119811/gf.png"
+  # Post3.snapshoot_url_one = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539117811/focusmatescreen.png"
+  # Post3.user = users.sample
+  Post3.save
+
+  Post4 = Post.new(name: "Add audio playback button to every line of notes")
+  Post4.description = "Good for record lectures and listen back for the things I did not remember well -- Ti Guo"
+  Post4.user_id = user4.id
+  Post4.tagline = "[IOS/Android/Mac/Windows | onenote.com] Microsoft's onenote's 'audio annotation' function"
+  Post4.image_url = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539120027/onenote.png"
+  # Post4.snapshoot_url_one = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539117811/focusmatescreen.png"
+  # Post4.user = users.sample
+  Post4.save
+
+  Post5 = Post.new(name: "Get notification when receiver opened your email")
+  Post5.description = ""
+  Post5.user_id = user4.id
+  Post5.tagline = "[Chrome | hubspot.com/products/sales] Chrome extension that tracks when your email gets read even when no reply"
+  Post5.image_url = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539121725/hubspot-sales.png"
+  # Post5.snapshoot_url_one = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539117811/focusmatescreen.png"
+  # Post5.user = users.sample
+  Post5.save
+
+  Post6 = Post.new(name: "Create keyboard shortcut for automating any tasks on computer")
+  Post6.description = ""
+  Post6.user_id = user4.id
+  Post6.tagline = "[Windows | autohotkey.com] AutoHotkey automates keystrokes and mouse clicks to more efficiently handle repetitive tasks"
+  Post6.image_url = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539122278/ahk.png"
+  # Post6.snapshoot_url_one = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539117811/focusmatescreen.png"
+  # Post6.user = users.sample
+  Post6.save
 end
