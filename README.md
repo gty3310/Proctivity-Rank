@@ -1,17 +1,16 @@
 # Productivity Rank
 
-[ProductivityRank live](https://ProductivityRank.herokuapp.com/#/)
+[ProductivityRank live](https://productivity-rank.herokuapp.com/#/)
 
 Productivity Rank is a full-stack web application modeled after Product Hunt.  It is built on a Ruby on Rails backend, PostgreSQL database, and React.js/Flux architecture frontend.
 
-![ProductivityRank live](homepage.png)
+![Alt text](/readme_image/homepage.png?raw=true "Optional Title")
 
 ## Idea
 
-Product Rank is one of my favorite site. It features surfacing a new batch of high quality new products.
+Product Hunt is one of my favorite site. It features surfacing a new batch of high quality new products.
 
 The idea of this site was to maintain a list of my personal favorite productivity tips and let the viewer see and vote for my productivity tips.
-
 
 ## Features and Implementation
 
@@ -22,12 +21,12 @@ Productivity Tips Search
 ## Project Design
 Productivity Rank was designed with simplicity and elegance as its primary goals. Considering the two-week time period, it was decided to focus on a core set of features that ran smoothly and bug-free. Keeping code manageable was prioritized over cloning every major feature of the target app.
 
-###D esign Documents
-+ [MVP List](https://github.com/gty3310/ProductivityRank/wiki/MVP-list)
-+ [Database Schema](https://github.com/gty3310/ProductivityRank/wiki/Database-Schema)
-+ [Routes](https://github.com/gty3310/ProductivityRank/wiki/Frontend-Routes)
-+ [Sample State](https://github.com/gty3310/ProductivityRank/wiki/Sample-State)
-+ [Backend Routes](https://github.com/gty3310/ProductivityRank/wiki/Backend-Routes)
+###Design Documents
++ [MVP List](https://github.com/gty3310/Proctivity-Rank/wiki/MVP-list)
++ [Database Schema](https://github.com/gty3310/Proctivity-Rank/wiki/Database-Schema)
++ [Routes](https://github.com/gty3310/Proctivity-Rank/wiki/Frontend-Routes)
++ [Sample State](https://github.com/gty3310/Proctivity-Rank/wiki/Sample-State)
++ [Backend Routes](https://github.com/gty3310/Proctivity-Rank/wiki/Backend-Routes)
 
 ##Technologies
 Rails was chosen due to its out-of-the-box support for relational databases and RESTful architecture.
