@@ -35,10 +35,11 @@ ActiveRecord::Base.transaction do
   user2.save
   user3.save
 
-  Post1 = Post.new(name: "Idea 1")
-  Post1.description = "Idea 1 description"
+  Post1 = Post.new(name: "On-demand peer pressure on FocusMate")
+  Post1.description = "When I am not able to focus on working, I use this site to book 1-hour work sessions with Accountability Partners. -- Ti Guo"
   Post1.user_id = user2.id
-  Post1.tagline = "idea 1 tagline"
+  Post1.tagline = "Real Time Accountability Partner Pairing site"
+  Post1.image_url = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539117103/fs.png"
   # Post1.user = users.sample
   Post1.save
 

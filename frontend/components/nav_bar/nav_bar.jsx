@@ -106,7 +106,7 @@ class NavBar extends React.Component {
           <div className="banner">
             <div className="banner-left">
               <h2>Discover your next favorite productivity tip</h2>
-              <p>Productivity Hunt surfaces the best productivity tips for digital age.
+              <p>Productivity Rank surfaces the best productivity tips for digital age.
                 It is a place for productivity enthusiasts
                 to share and geek out about the greatest productivity tips,
                 and PRODUCTIVITY TIPS ONLY.</p>
