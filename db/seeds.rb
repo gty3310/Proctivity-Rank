@@ -30,17 +30,34 @@ ActiveRecord::Base.transaction do
   # user3.image_url = user_images.sample
   user3.email = "tes3t@gmail.com"
 
+  user4 = User.new(username: "Ti_Guo", password: "password")
+  user4.headline = "Mechatronics Engineering Student @ University of Waterloo"
+  # user4.image_url = user_images.sample
+  user4.email = "guoty3310@gmail.com"
+
   demo_user.save
   user1.save
   user2.save
   user3.save
+  user4.save
 
   Post1 = Post.new(name: "On-demand peer pressure on FocusMate")
-  Post1.description = "When I am not able to focus on working, I use this site to book 1-hour work sessions with Accountability Partners. -- Ti Guo"
-  Post1.user_id = user2.id
-  Post1.tagline = "Real Time Accountability Partner Pairing site"
+  Post1.description = "
+  www.focusmate.com
+  When I am not able to focus on working, I use this site to book 1-hour work sessions with Accountability Partners. -- Ti Guo"
+  Post1.user_id = user4.id
+  Post1.tagline = "Real Time Accountability Partner Pairing site. Mac/Windows"
   Post1.image_url = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539117103/fs.png"
+  Post1.snapshoot_url_one = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539117811/focusmatescreen.png"
   # Post1.user = users.sample
   Post1.save
 
+  Post2 = Post.new(name: "Copy paste multiple clips at the same time using Paste")
+  Post2.description = "Clipboard Management Software is one type of software that significantly improved my productivity. -- Ti Guo"
+  Post2.user_id = user4.id
+  Post2.tagline = "Clipboard Management Software. Mac"
+  Post2.image_url = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539118300/paste-mac.png"
+  # Post2.snapshoot_url_one = "https://res.cloudinary.com/waterloo-collegiate-institute/image/upload/v1539117811/focusmatescreen.png"
+  # Post2.user = users.sample
+  Post2.save
 end
